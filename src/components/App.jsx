@@ -1,17 +1,20 @@
 import Profile from './Profile/Profile';
 import users from './Profile/user.json';
+import stats from './Statistics/data.json';
+import StatisticList from './Statistics/StatisticList';
 
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
+          style={{
+        // height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101',
-      }}
+        color: '#010101'
+    }}
     >
       <Profile
         username={users.username}
@@ -19,8 +22,9 @@ export const App = () => {
         location={users.location}
         url={users.avatar}
         stats={users.stats}
-        
-     
+      />
+      <StatisticList
+        stats={stats} title="Upload stats"
       />
     </div>
   );
