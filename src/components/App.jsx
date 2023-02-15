@@ -4,21 +4,21 @@ import stats from './Statistics/data.json';
 import StatisticList from './Statistics/StatisticList';
 import FriendList from './FriendList/FriendList';
 import friends from './FriendList/friends.json';
-
-
+import transactions from './TransactionHistory/transactions.json';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
     <div
-          style={{
+      style={{
         // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
-    }}
+        color: '#010101',
+      }}
     >
       <Profile
         username={users.username}
@@ -27,14 +27,9 @@ export const App = () => {
         url={users.avatar}
         stats={users.stats}
       />
-      <StatisticList
-        stats={stats} title="Upload stats"
-      />
-
-      <FriendList
-        friends={friends} />
+      <StatisticList stats={stats} title="Upload stats" />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
-
-

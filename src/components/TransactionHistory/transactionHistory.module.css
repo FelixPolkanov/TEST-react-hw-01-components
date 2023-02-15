@@ -1,0 +1,36 @@
+.transaction_table {
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: rgb(51 51 51 / 23%) 0px 5px 7px -1px;
+}
+
+
+.table_head {
+    background-color: rgb(147, 198, 241);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+
+.table_title {
+    min-width: 200px;
+    min-height: 140px;
+    padding: 12px;
+    font-size: 30px;
+}
+
+.table_body_row {
+    font-size: 20px;
+    background-color: rgb(222, 229, 222);
+}
+
+
+.table_body_row:nth-child(odd) {
+    background-color: rgb(207, 230, 207);
+}
+
+.table_row_data {
+    text-transform: capitalize;
+    padding: 20px;
+}
